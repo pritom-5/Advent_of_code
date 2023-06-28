@@ -2,9 +2,9 @@ import { readFileSync } from "fs";
 
 const input = readFileSync("./12_input.txt", "utf8");
 
-function numberSum(input: any) {
+function numberSum(text_value: string) {
 	const regex = /-?\d+/g;
-	const valuesArr = input.match(regex);
+	const valuesArr = text_value.match(regex);
 	let result = 0;
 	for (let i of valuesArr) {
 		result += Number(i);
@@ -55,7 +55,5 @@ function removeObjWithRed() {
 		);
 	}
 }
-
-removeObjWithRed();
 
 console.log(numberSum(input_0));
