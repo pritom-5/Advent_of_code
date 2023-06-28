@@ -95,10 +95,10 @@ function getPriorityDiff(seatPlan: string[], graph: any): number {
 	return totalDiff;
 }
 
-function permutations(arr: string[]): string[][] {
+function permutations<T>(arr: T[]): T[][] {
 	const result = [];
 
-	function walk(curr: string[], rem: string[]): void {
+	function walk(curr: T[], rem: T[]): void {
 		if (!rem.length) {
 			result.push([...curr]);
 			return;

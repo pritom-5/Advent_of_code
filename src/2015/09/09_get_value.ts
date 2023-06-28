@@ -40,10 +40,10 @@ for (let city of cities) {
 	}
 }
 
-function allPermutations(arr: string[] | number[]) {
+function allPermutations<T>(arr: T[]): T[][] {
 	const result = [];
 
-	function walk(curr: any, remaining: any) {
+	function walk(curr: T[], remaining: T[]) {
 		if (!remaining.length) {
 			result.push([...curr]);
 			return;
